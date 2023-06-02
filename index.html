@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Application using JS!</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            color: #555;
+        }
+        
+        #blog-list {
+            list-style-type: none;
+            
+            display:flexbox
+        }
+        
+        .blog-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #39b29c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .blog-title {
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .blog-body {
+            margin-top: 10px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .add-blog-form {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .add-blog-form input[type="text"],
+        .add-blog-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #f6f6f6;
+        }
+        
+        .add-blog-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .add-blog-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            float: right;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        .delete-btn:focus {
+            outline: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Blog Web App</h1>
+    <div class="add-blog-form">
+        <h2>Add a new blog:</h2>
+        <input type="text" id="title-input" placeholder="Title" required>
+        <textarea id="body-input" placeholder="Content" required></textarea>
+        <button id="add-blog-btn">Add Blog</button>
+    </div>
+    <h2>All Blogs:</h2>
+    <ul id="blog-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
